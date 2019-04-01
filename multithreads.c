@@ -38,4 +38,18 @@ for(i; i < (z -1); i++)
     printf("The minimum:  %d\n", minimum);
     printf("The maximum:  %d\n", maximum);
 }
+void *avg(void *ptr)
+{
+    datastruct * copy;
+    copy = (datastruct *) ptr;
+    
+    int sz= copy->size;
+    int i;
+    
+    for(i = 0; i < sz; i++)
+    {
+        average += (copy->values[i]);    
+    }                           
+    average = (int)(average / sz); 
+}
 
